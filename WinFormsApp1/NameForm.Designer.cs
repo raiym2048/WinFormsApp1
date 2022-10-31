@@ -30,8 +30,7 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.log_out = new System.Windows.Forms.Button();
             this.addCard = new System.Windows.Forms.Button();
             this.txt1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -55,9 +54,6 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.addCard);
             this.panel1.Controls.Add(this.txt1);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -66,29 +62,19 @@
             this.panel1.Size = new System.Drawing.Size(800, 450);
             this.panel1.TabIndex = 1;
             // 
-            // button2
+            // log_out
             // 
-            this.button2.Location = new System.Drawing.Point(654, 231);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "Check";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(594, 328);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Main";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.log_out.Location = new System.Drawing.Point(722, 64);
+            this.log_out.Name = "log_out";
+            this.log_out.Size = new System.Drawing.Size(75, 23);
+            this.log_out.TabIndex = 3;
+            this.log_out.Text = "LogOut";
+            this.log_out.UseVisualStyleBackColor = true;
+            this.log_out.Click += new System.EventHandler(this.log_out_Click);
             // 
             // addCard
             // 
-            this.addCard.Location = new System.Drawing.Point(564, 148);
+            this.addCard.Location = new System.Drawing.Point(100, 64);
             this.addCard.Name = "addCard";
             this.addCard.Size = new System.Drawing.Size(75, 23);
             this.addCard.TabIndex = 2;
@@ -108,7 +94,9 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.Highlight;
+            this.panel2.Controls.Add(this.log_out);
             this.panel2.Controls.Add(this.ExitButton);
+            this.panel2.Controls.Add(this.addCard);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
@@ -155,7 +143,6 @@
         private Label ExitButton;
         private Button addCard;
         private Label txt1;
-        private Button button1;
-        private Button button2;
+        private Button log_out;
     }
 }

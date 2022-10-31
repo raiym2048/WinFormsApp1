@@ -32,14 +32,14 @@ namespace WinFormsApp1
 
             dB.openConnection();
 
-            if (command.ExecuteNonQuery() == 1)//error
+            if (command.ExecuteNonQuery() == 1)
             {
-                MessageBox.Show(idM.ToString());
                 l.Add(card_id_in.Text);
                 l.Add(card_user_in.Text);
                 l.Add(balance_in.Text);
 
-                MessageBox.Show("acc was created!");
+                MessageBox.Show("the card was created!");
+                dB.ClearLists();
                 this.Close();
                 NameForm registrationForm = new NameForm();
                 registrationForm.Show();

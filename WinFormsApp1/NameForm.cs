@@ -21,6 +21,8 @@ namespace WinFormsApp1
             InitializeComponent();
             
             DB data = new DB();
+            data.ClearLists();
+            data.RefreshDatabase();
 
             CreateLabel(data.getCarId(), data.getCarName(), data.getBalance());
             
@@ -60,6 +62,12 @@ namespace WinFormsApp1
                 label2.Location = new Point(500, 150 + (i * 50));
                 panel1.Controls.Add(label2);
 
+                Button deleteButton = new Button();
+                deleteButton.Text = "delete";
+                deleteButton.Name = "dlb";
+                deleteButton.Location = new Point(700, 150 + (i * 50));
+                panel1.Controls.Add(deleteButton);
+
 
 
             }
@@ -79,7 +87,7 @@ namespace WinFormsApp1
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void log_out_Click(object sender, EventArgs e)
         {
 
             /*foreach (Control ctrl in this.panel1.Controls)
@@ -99,7 +107,8 @@ namespace WinFormsApp1
 
             this.Close();
             RegisterForm registerForm = new RegisterForm();
-            registerForm.Show();    
+            registerForm.Show();
+            
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -108,20 +117,7 @@ namespace WinFormsApp1
             DB dB = new DB();
             dB.ClearLists();
             InitializeComponent();
-            /* foreach (Control ctrl in this.panel1.Controls)
-             {
-                 // Check if control is of type label
-                 if (ctrl.GetType() == typeof(Label))
-                 {
-                     // check the name of the label
-                    if (ctrl.Name == "lb")
-                     {
-                         this.panel1.Controls.Remove(ctrl);
-
-                     }
-                 }
-             }*/
         }
     }
-}                    //
+}                    
 

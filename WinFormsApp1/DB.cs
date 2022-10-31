@@ -10,7 +10,7 @@ namespace WinFormsApp1
 {
     public partial class DB
     {
-        MySqlConnection connection = new MySqlConnection("server=localhost;port=3306;username=root;password=root;database=bd;SSL Mode=None");
+        MySqlConnection connection = new MySqlConnection("server=localhost;port=8889;username=root;password=root;database=bd;SSL Mode=None");
         public static List<string> cardName = new List<string>();
         public static List<string> cardID = new List<string>();
         public static List<string> blnc = new List<string>();
@@ -65,21 +65,46 @@ namespace WinFormsApp1
                         cardID.Add(reader.GetValue(1).ToString());
                         cardName.Add(reader.GetValue(2).ToString());
                         blnc.Add(reader.GetValue(3).ToString());
-
+                        
 
                     }
                 }
-            }
+            }  
            
            
-            
-            connection.Close();
         }
         public void ClearLists()
         {
             cardID.Clear();
             cardName.Clear();
             blnc.Clear();
+
+        }
+        public void RefreshDatabase()
+        {
+            connection.Open();
+            MySqlCommand cmd2 = connection.CreateCommand();
+            string sql2 = "SELECT * FROM cards where id = @iD";
+            cmd2.Parameters.Add("@iD", MySqlDbType.VarChar).Value = usId;
+
+            cmd2.CommandText = sql2;
+
+            using (DbDataReader reader = cmd2.ExecuteReader())
+            {
+                if (reader.HasRows)
+                {
+
+                    while (reader.Read())
+                    {
+
+                        cardID.Add(reader.GetValue(1).ToString());
+                        cardName.Add(reader.GetValue(2).ToString());
+                        blnc.Add(reader.GetValue(3).ToString());
+
+
+                    }
+                }
+            }
         }
 
 
@@ -118,5 +143,9 @@ namespace WinFormsApp1
         {
             return connection;
         }
+    }
+
+    class Database
+    {
     }
 }
