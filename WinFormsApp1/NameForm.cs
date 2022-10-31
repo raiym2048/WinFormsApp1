@@ -16,6 +16,8 @@ namespace WinFormsApp1
         public static bool logOut = false;
 
 
+        
+
         public NameForm()
         {
             InitializeComponent();
@@ -66,12 +68,19 @@ namespace WinFormsApp1
                 deleteButton.Text = "delete";
                 deleteButton.Name = "dlb";
                 deleteButton.Location = new Point(700, 150 + (i * 50));
+                deleteButton.Click += new EventHandler(delete_Click);
                 panel1.Controls.Add(deleteButton);
 
 
 
             }
         }
+
+       /* private EventHandler delete_Click()
+        {
+            MessageBox.Show("delete!");
+            throw new NotImplementedException();
+        }*/
 
         private void ExitButton_Click(object sender, EventArgs e)
         {
@@ -118,6 +127,11 @@ namespace WinFormsApp1
             dB.ClearLists();
             InitializeComponent();
         }
+        private void delete_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("delete!");
+        }
+
     }
 }                    
 
