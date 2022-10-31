@@ -78,7 +78,7 @@ namespace WinFormsApp1
                 name.Show();
             }
             else
-                MessageBox.Show("No!");
+                MessageBox.Show("Incorrect email or password");
 
         }
 

@@ -22,35 +22,46 @@ namespace WinFormsApp1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            DB dB = new DB();
-            MySqlCommand command = new MySqlCommand("INSERT INTO `cards` (`id`, `card_id`, `card_user`, `balance`) VALUES (@id, @card_id1, @card_user, @balance);", dB.getConnection());
-            int idM = dB.getUsId();
-            command.Parameters.Add("@id", MySqlDbType.VarChar).Value = idM;
-            command.Parameters.Add("@card_id1", MySqlDbType.VarChar).Value = card_id_in.Text;
-            command.Parameters.Add("@card_user", MySqlDbType.VarChar).Value = card_user_in.Text;
-            command.Parameters.Add("@balance", MySqlDbType.VarChar).Value = balance_in.Text;
-
-            dB.openConnection();
-
-            if (command.ExecuteNonQuery() == 1)
+            if (card_user_in.Text.Length > 2 && card_user_in.Text != "" &&
+                card_id_in.Text.Length > 2 && card_id_in.Text != "" &&
+                balance_in.Text.Length > 0 && balance_in.Text != "")
             {
-                l.Add(card_id_in.Text);
-                l.Add(card_user_in.Text);
-                l.Add(balance_in.Text);
 
-                MessageBox.Show("the card was created!");
-                dB.ClearLists();
-                this.Close();
-                NameForm registrationForm = new NameForm();
-                registrationForm.Show();
-                InitializeComponent();
 
+                DB dB = new DB();
+                MySqlCommand command = new MySqlCommand("INSERT INTO `cards` (`id`, `card_id`, `card_user`, `balance`) VALUES (@id, @card_id1, @card_user, @balance);", dB.getConnection());
+                int idM = dB.getUsId();
+                command.Parameters.Add("@id", MySqlDbType.VarChar).Value = idM;
+                command.Parameters.Add("@card_id1", MySqlDbType.VarChar).Value = card_id_in.Text;
+                command.Parameters.Add("@card_user", MySqlDbType.VarChar).Value = card_user_in.Text;
+                command.Parameters.Add("@balance", MySqlDbType.VarChar).Value = balance_in.Text;
+
+                dB.openConnection();
+
+                if (command.ExecuteNonQuery() == 1)
+                {
+                    l.Add(card_id_in.Text);
+                    l.Add(card_user_in.Text);
+                    l.Add(balance_in.Text);
+
+                    MessageBox.Show("the card was created!");
+                    dB.ClearLists();
+                    this.Close();
+                    NameForm registrationForm = new NameForm();
+                    registrationForm.Show();
+                    InitializeComponent();
+
+                }
+
+                else
+                    MessageBox.Show("acc wasn't created!");
+
+                dB.closeConnection();
             }
-
             else
-                MessageBox.Show("acc wasn't created!");
-
-            dB.closeConnection();
+            {
+                MessageBox.Show("Fill the blanks!");
+            }
         }
 
         private void textBox3_TextChanged(object sender, EventArgs e)

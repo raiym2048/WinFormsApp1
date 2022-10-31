@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.Common;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.VisualBasic.ApplicationServices;
 using MySqlConnector;
 
 namespace WinFormsApp1
@@ -69,7 +71,8 @@ namespace WinFormsApp1
 
                     }
                 }
-            }  
+            }
+            connection.Close();
            
            
         }
@@ -79,6 +82,26 @@ namespace WinFormsApp1
             cardName.Clear();
             blnc.Clear();
 
+        }
+        public void RemoveLabel(Label c)
+        {
+            connection.Open();
+           // MessageBox.Show(c.Text);
+            MySqlCommand cmd2 = connection.CreateCommand();
+            string sql2 = "DELETE FROM cards where card_id=@ids";
+            //"DELETE FROM `movies` WHERE `movie_id` = 18;"
+            //sql2.User
+            // Allow.User Variables = true;
+
+            cmd2.Parameters.Add("@ids", MySqlDbType.VarChar).Value = c.Text;
+
+            cmd2.CommandText = sql2;
+
+            int a = cmd2.ExecuteNonQuery();
+            //MessageBox.Show(a.ToString());
+
+            //throw new NotImplementedException();
+            connection.Close();
         }
         public void RefreshDatabase()
         {
@@ -105,6 +128,7 @@ namespace WinFormsApp1
                     }
                 }
             }
+            connection.Close();
         }
 
 
@@ -143,6 +167,8 @@ namespace WinFormsApp1
         {
             return connection;
         }
+
+       
     }
 
     class Database
