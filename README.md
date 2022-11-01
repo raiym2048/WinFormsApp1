@@ -35,6 +35,8 @@ MySqlConnection connection = new MySqlConnection("server=localhost;port=8889;use
 6)Check the versions of: 
 Visual Studio 2022. Not recomended work in 2019 version.The Application writed "Visual Studio 2022";
 
+Good luck!
+
 
 
 
