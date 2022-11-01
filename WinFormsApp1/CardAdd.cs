@@ -72,4 +72,8 @@ namespace WinFormsApp1
             main.Show();
         }
     }
+
+    public class CardAddDiagram
+    {
+    }
 }
