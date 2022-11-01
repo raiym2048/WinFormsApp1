@@ -12,15 +12,15 @@ using System.Windows.Forms.VisualStyles;
 
 namespace WinFormsApp1
 {
-    public partial class Me : Form
+    public partial class CardAdd : Form
     {
-        public Me()
+        public CardAdd()
         {
             InitializeComponent();
         }
         public List<String> l = new List<String>();
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Save_Click(object sender, EventArgs e)
         {
             if (card_user_in.Text.Length > 2 && card_user_in.Text != "" &&
                 card_id_in.Text.Length > 2 && card_id_in.Text != "" &&
@@ -47,7 +47,7 @@ namespace WinFormsApp1
                     MessageBox.Show("the card was created!");
                     dB.ClearLists();
                     this.Close();
-                    NameForm registrationForm = new NameForm();
+                    MainPage registrationForm = new MainPage();
                     registrationForm.Show();
                     InitializeComponent();
 
@@ -64,16 +64,12 @@ namespace WinFormsApp1
             }
         }
 
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
 
-        }
-
-        private void button1_Click_1(object sender, EventArgs e)
+        private void Back_Click(object sender, EventArgs e)
         {
             this.Hide();
-            RegisterForm registerForm = new RegisterForm();
-            registerForm.Show();
+            MainPage main = new MainPage();
+            main.Show();
         }
     }
 }

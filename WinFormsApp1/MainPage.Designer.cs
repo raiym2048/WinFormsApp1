@@ -1,6 +1,6 @@
 ﻿namespace WinFormsApp1
 {
-    partial class NameForm
+    partial class MainPage
     {
         /// <summary>
         /// Required designer variable.
@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.log_out = new System.Windows.Forms.Button();
-            this.addCard = new System.Windows.Forms.Button();
+            this.MainPanel = new System.Windows.Forms.Panel();
             this.txt1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.log_out = new System.Windows.Forms.Button();
             this.ExitButton = new System.Windows.Forms.Label();
-            this.panel1.SuspendLayout();
+            this.addCard = new System.Windows.Forms.Button();
+            this.MainPanel.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -51,36 +51,16 @@
             this.label1.Text = "Main Form";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // panel1
+            // MainPanel
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.panel1.Controls.Add(this.txt1);
-            this.panel1.Controls.Add(this.panel2);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(800, 450);
-            this.panel1.TabIndex = 1;
-            // 
-            // log_out
-            // 
-            this.log_out.Location = new System.Drawing.Point(722, 64);
-            this.log_out.Name = "log_out";
-            this.log_out.Size = new System.Drawing.Size(75, 23);
-            this.log_out.TabIndex = 3;
-            this.log_out.Text = "LogOut";
-            this.log_out.UseVisualStyleBackColor = true;
-            this.log_out.Click += new System.EventHandler(this.log_out_Click);
-            // 
-            // addCard
-            // 
-            this.addCard.Location = new System.Drawing.Point(100, 64);
-            this.addCard.Name = "addCard";
-            this.addCard.Size = new System.Drawing.Size(75, 23);
-            this.addCard.TabIndex = 2;
-            this.addCard.Text = "Add Card";
-            this.addCard.UseVisualStyleBackColor = true;
-            this.addCard.Click += new System.EventHandler(this.addCard_Click);
+            this.MainPanel.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.MainPanel.Controls.Add(this.txt1);
+            this.MainPanel.Controls.Add(this.panel2);
+            this.MainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.MainPanel.Location = new System.Drawing.Point(0, 0);
+            this.MainPanel.Name = "MainPanel";
+            this.MainPanel.Size = new System.Drawing.Size(800, 450);
+            this.MainPanel.TabIndex = 1;
             // 
             // txt1
             // 
@@ -104,6 +84,16 @@
             this.panel2.Size = new System.Drawing.Size(800, 100);
             this.panel2.TabIndex = 0;
             // 
+            // log_out
+            // 
+            this.log_out.Location = new System.Drawing.Point(722, 64);
+            this.log_out.Name = "log_out";
+            this.log_out.Size = new System.Drawing.Size(75, 23);
+            this.log_out.TabIndex = 3;
+            this.log_out.Text = "LogOut";
+            this.log_out.UseVisualStyleBackColor = true;
+            this.log_out.Click += new System.EventHandler(this.log_out_Click);
+            // 
             // ExitButton
             // 
             this.ExitButton.BackColor = System.Drawing.SystemColors.Highlight;
@@ -118,18 +108,28 @@
             this.ExitButton.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.ExitButton.Click += new System.EventHandler(this.ExitButton_Click);
             // 
-            // NameForm
+            // addCard
+            // 
+            this.addCard.Location = new System.Drawing.Point(100, 64);
+            this.addCard.Name = "addCard";
+            this.addCard.Size = new System.Drawing.Size(75, 23);
+            this.addCard.TabIndex = 2;
+            this.addCard.Text = "Add Card";
+            this.addCard.UseVisualStyleBackColor = true;
+            this.addCard.Click += new System.EventHandler(this.addCard_Click);
+            // 
+            // MainPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.MainPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "NameForm";
+            this.Name = "MainPage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "NameForm";
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.MainPanel.ResumeLayout(false);
+            this.MainPanel.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -138,7 +138,7 @@
         #endregion
 
         private Label label1;
-        private Panel panel1;
+        private Panel MainPanel;
         private Panel panel2;
         private Label ExitButton;
         private Button addCard;

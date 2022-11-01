@@ -12,9 +12,9 @@ using System.Windows.Forms;
 
 namespace WinFormsApp1
 {
-    public partial class RegistrationForm : Form
+    public partial class LoginPage : Form
     {
-        public RegistrationForm()
+        public LoginPage()
         {
             InitializeComponent();
             this.PassArea.AutoSize = false;
@@ -37,7 +37,7 @@ namespace WinFormsApp1
         }
 
         Point lastPoint;
-        private void panel1_MouseMove(object sender, MouseEventArgs e)
+        private void MainPanel_MouseMove(object sender, MouseEventArgs e)
         {
             if(e.Button == MouseButtons.Left)
             {
@@ -46,7 +46,7 @@ namespace WinFormsApp1
             }
         }
 
-        private void panel1_MouseDown(object sender, MouseEventArgs e)
+        private void MainPanel_MouseDown(object sender, MouseEventArgs e)
         {
             lastPoint = new Point(e.X, e.Y);
         }
@@ -71,10 +71,9 @@ namespace WinFormsApp1
 
             if (table.Rows.Count > 0)
             {
-               // MessageBox.Show("All true!");
 
                 this.Hide();
-                NameForm name = new NameForm();
+                MainPage name = new MainPage();
                 name.Show();
             }
             else
@@ -89,9 +88,5 @@ namespace WinFormsApp1
             registerForm.Show();
         }
 
-        private void EmailArea_TextChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }

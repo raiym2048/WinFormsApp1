@@ -1,6 +1,6 @@
 ﻿namespace WinFormsApp1
 {
-    partial class RegistrationForm
+    partial class LoginPage
     {
         /// <summary>
         /// Required designer variable.
@@ -59,8 +59,8 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(350, 340);
             this.panel1.TabIndex = 0;
-            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
-            this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
+            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MainPanel_MouseDown);
+            this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.MainPanel_MouseMove);
             // 
             // reg
             // 
@@ -115,9 +115,7 @@
             this.EmailArea.Name = "EmailArea";
             this.EmailArea.Size = new System.Drawing.Size(218, 38);
             this.EmailArea.TabIndex = 2;
-            this.EmailArea.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.EmailArea.TextChanged += new System.EventHandler(this.EmailArea_TextChanged);
-            // 
+            this.EmailArea.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::WinFormsApp1.Properties.Resources.cookie;

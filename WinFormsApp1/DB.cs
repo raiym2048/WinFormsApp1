@@ -86,21 +86,13 @@ namespace WinFormsApp1
         public void RemoveLabel(Label c)
         {
             connection.Open();
-           // MessageBox.Show(c.Text);
             MySqlCommand cmd2 = connection.CreateCommand();
             string sql2 = "DELETE FROM cards where card_id=@ids";
-            //"DELETE FROM `movies` WHERE `movie_id` = 18;"
-            //sql2.User
-            // Allow.User Variables = true;
-
             cmd2.Parameters.Add("@ids", MySqlDbType.VarChar).Value = c.Text;
 
             cmd2.CommandText = sql2;
 
             int a = cmd2.ExecuteNonQuery();
-            //MessageBox.Show(a.ToString());
-
-            //throw new NotImplementedException();
             connection.Close();
         }
         public void RefreshDatabase()

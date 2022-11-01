@@ -51,7 +51,7 @@ namespace WinFormsApp1
 
        
 
-        private void panel1_MouseMove(object sender, MouseEventArgs e)
+        private void MainPanel_MouseMove(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
             {
@@ -60,7 +60,7 @@ namespace WinFormsApp1
             }
         }
 
-        private void panel1_MouseDown(object sender, MouseEventArgs e)
+        private void MainPanel_MouseDown(object sender, MouseEventArgs e)
         {
             lastPoint = new Point(e.X, e.Y);
         }
@@ -96,7 +96,7 @@ namespace WinFormsApp1
             {
                 MessageBox.Show("acc was created!");
                 this.Hide();
-                RegistrationForm registrationForm = new RegistrationForm();
+                LoginPage registrationForm = new LoginPage();
                 registrationForm.Show();
                 
             }
@@ -218,7 +218,7 @@ namespace WinFormsApp1
         private void login_Click(object sender, EventArgs e)
         {
             this.Hide();
-            RegistrationForm registration = new RegistrationForm();
+            LoginPage registration = new LoginPage();
             registration.Show();
         }
     }
