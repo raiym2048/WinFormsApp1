@@ -29,7 +29,8 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.MainPanel = new System.Windows.Forms.Panel();
+            this.login = new System.Windows.Forms.Button();
             this.EnterButton = new System.Windows.Forms.Button();
             this.surnameArea = new System.Windows.Forms.TextBox();
             this.PassArea = new System.Windows.Forms.TextBox();
@@ -39,8 +40,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.ExitButton = new System.Windows.Forms.Label();
-            this.login = new System.Windows.Forms.Button();
-            this.panel1.SuspendLayout();
+            this.MainPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -58,25 +58,35 @@
             this.label1.Text = "REGISTRATION";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // panel1
+            // MainPanel
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.panel1.Controls.Add(this.login);
-            this.panel1.Controls.Add(this.EnterButton);
-            this.panel1.Controls.Add(this.surnameArea);
-            this.panel1.Controls.Add(this.PassArea);
-            this.panel1.Controls.Add(this.pictureBox2);
-            this.panel1.Controls.Add(this.nameArea);
-            this.panel1.Controls.Add(this.EmailArea);
-            this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.panel2);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(800, 450);
-            this.panel1.TabIndex = 1;
-            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
-            this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
+            this.MainPanel.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.MainPanel.Controls.Add(this.login);
+            this.MainPanel.Controls.Add(this.EnterButton);
+            this.MainPanel.Controls.Add(this.surnameArea);
+            this.MainPanel.Controls.Add(this.PassArea);
+            this.MainPanel.Controls.Add(this.pictureBox2);
+            this.MainPanel.Controls.Add(this.nameArea);
+            this.MainPanel.Controls.Add(this.EmailArea);
+            this.MainPanel.Controls.Add(this.pictureBox1);
+            this.MainPanel.Controls.Add(this.panel2);
+            this.MainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.MainPanel.Location = new System.Drawing.Point(0, 0);
+            this.MainPanel.Name = "MainPanel";
+            this.MainPanel.Size = new System.Drawing.Size(800, 450);
+            this.MainPanel.TabIndex = 1;
+            this.MainPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MainPanel_MouseDown);
+            this.MainPanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.MainPanel_MouseMove);
+            // 
+            // login
+            // 
+            this.login.Location = new System.Drawing.Point(599, 312);
+            this.login.Name = "login";
+            this.login.Size = new System.Drawing.Size(75, 23);
+            this.login.TabIndex = 6;
+            this.login.Text = "login";
+            this.login.UseVisualStyleBackColor = true;
+            this.login.Click += new System.EventHandler(this.login_Click);
             // 
             // EnterButton
             // 
@@ -187,27 +197,17 @@
             this.ExitButton.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.ExitButton.Click += new System.EventHandler(this.ExitButton_Click);
             // 
-            // login
-            // 
-            this.login.Location = new System.Drawing.Point(599, 312);
-            this.login.Name = "login";
-            this.login.Size = new System.Drawing.Size(75, 23);
-            this.login.TabIndex = 6;
-            this.login.Text = "login";
-            this.login.UseVisualStyleBackColor = true;
-            this.login.Click += new System.EventHandler(this.login_Click);
-            // 
             // RegisterForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.MainPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "RegisterForm";
             this.Text = "RegisterForm";
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.MainPanel.ResumeLayout(false);
+            this.MainPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
@@ -218,7 +218,7 @@
         #endregion
 
         private Label label1;
-        private Panel panel1;
+        private Panel MainPanel;
         private Button EnterButton;
         private TextBox PassArea;
         private PictureBox pictureBox2;

@@ -1,6 +1,6 @@
 ﻿namespace WinFormsApp1
 {
-    partial class Me
+    partial class CardAdd
     {
         /// <summary>
         /// Required designer variable.
@@ -31,7 +31,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.moneySave = new System.Windows.Forms.RadioButton();
             this.moneyTake = new System.Windows.Forms.RadioButton();
-            this.button1 = new System.Windows.Forms.Button();
+            this.Back = new System.Windows.Forms.Button();
             this.balance = new System.Windows.Forms.Label();
             this.balance_in = new System.Windows.Forms.TextBox();
             this.card_user_in = new System.Windows.Forms.TextBox();
@@ -47,7 +47,7 @@
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panel1.Controls.Add(this.moneySave);
             this.panel1.Controls.Add(this.moneyTake);
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.Back);
             this.panel1.Controls.Add(this.balance);
             this.panel1.Controls.Add(this.balance_in);
             this.panel1.Controls.Add(this.card_user_in);
@@ -82,15 +82,15 @@
             this.moneyTake.Text = "Take Money";
             this.moneyTake.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // Back
             // 
-            this.button1.Location = new System.Drawing.Point(595, 287);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "Menu";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            this.Back.Location = new System.Drawing.Point(595, 287);
+            this.Back.Name = "Back";
+            this.Back.Size = new System.Drawing.Size(75, 23);
+            this.Back.TabIndex = 9;
+            this.Back.Text = "Back";
+            this.Back.UseVisualStyleBackColor = true;
+            this.Back.Click += new System.EventHandler(this.Back_Click);
             // 
             // balance
             // 
@@ -106,9 +106,7 @@
             this.balance_in.Location = new System.Drawing.Point(209, 184);
             this.balance_in.Name = "balance_in";
             this.balance_in.Size = new System.Drawing.Size(207, 23);
-            this.balance_in.TabIndex = 5;
-            this.balance_in.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
-            // 
+            this.balance_in.TabIndex = 5;            // 
             // card_user_in
             // 
             this.card_user_in.Location = new System.Drawing.Point(209, 127);
@@ -149,15 +147,15 @@
             this.Save.TabIndex = 0;
             this.Save.Text = "Save";
             this.Save.UseVisualStyleBackColor = true;
-            this.Save.Click += new System.EventHandler(this.button1_Click);
+            this.Save.Click += new System.EventHandler(this.Save_Click);
             // 
-            // Me
+            // CardAdd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.panel1);
-            this.Name = "Me";
+            this.Name = "CardAdd";
             this.Text = "Me";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -175,7 +173,7 @@
         private TextBox card_id_in;
         private Label CardUser;
         private Label CardId;
-        private Button button1;
+        private Button Back;
         private RadioButton moneySave;
         private RadioButton moneyTake;
     }

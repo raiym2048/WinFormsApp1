@@ -24,14 +24,14 @@ namespace WinFormsApp1
         {
             DB dB = new DB();
             dB.RemoveLabel(c);
-            NameForm nameForm = new NameForm();
+            MainPage nameForm = new MainPage();
             this.Hide();
             nameForm.Show();
         }
 
         private void returnLabel_Click(object sender, EventArgs e)
         {
-            NameForm nameForm = new NameForm();
+            MainPage nameForm = new MainPage();
             this.Hide();
             nameForm.Show();
         }

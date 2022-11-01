@@ -1,5 +1,4 @@
 C:\Users\raiym\source\repos\WinFormsApp1\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.csproj.AssemblyReference.cache
-C:\Users\raiym\source\repos\WinFormsApp1\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.RegistrationForm.resources
 C:\Users\raiym\source\repos\WinFormsApp1\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.csproj.GenerateResource.cache
 C:\Users\raiym\source\repos\WinFormsApp1\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\raiym\source\repos\WinFormsApp1\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.AssemblyInfoInputs.cache
@@ -19,8 +18,6 @@ C:\Users\raiym\source\repos\WinFormsApp1\WinFormsApp1\obj\Debug\net6.0-windows\W
 C:\Users\raiym\source\repos\WinFormsApp1\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.csproj.CopyComplete
 C:\Users\raiym\source\repos\WinFormsApp1\WinFormsApp1\bin\Debug\net6.0-windows\MySqlConnector.dll
 C:\Users\raiym\source\repos\WinFormsApp1\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.RegisterForm.resources
-C:\Users\raiym\source\repos\WinFormsApp1\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.NameForm.resources
-C:\Users\raiym\source\repos\WinFormsApp1\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.Me.resources
 C:\Users\raiym\source\repos\WinFormsApp1\WinFormsApp1\bin\Debug\net6.0-windows\Ben.Demystifier.dll
 C:\Users\raiym\source\repos\WinFormsApp1\WinFormsApp1\bin\Debug\net6.0-windows\Dawn.Guard.dll
 C:\Users\raiym\source\repos\WinFormsApp1\WinFormsApp1\bin\Debug\net6.0-windows\Lime.Messaging.dll
@@ -92,3 +89,6 @@ C:\Users\raiym\source\repos\WinFormsApp1\WinFormsApp1\bin\Debug\net6.0-windows\r
 C:\Users\raiym\source\repos\WinFormsApp1\WinFormsApp1\bin\Debug\net6.0-windows\runtimes\unix\lib\netstandard2.0\System.Data.SqlClient.dll
 C:\Users\raiym\source\repos\WinFormsApp1\WinFormsApp1\bin\Debug\net6.0-windows\runtimes\win\lib\netstandard2.0\System.Data.SqlClient.dll
 C:\Users\raiym\source\repos\WinFormsApp1\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.DeletingObject.resources
+C:\Users\raiym\source\repos\WinFormsApp1\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.CardAdd.resources
+C:\Users\raiym\source\repos\WinFormsApp1\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.LoginPage.resources
+C:\Users\raiym\source\repos\WinFormsApp1\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.MainPage.resources

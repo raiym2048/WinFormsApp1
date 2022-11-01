@@ -28,30 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.deleteLabels = new System.Windows.Forms.Button();
+            this.MainPanel = new System.Windows.Forms.Panel();
             this.returnLabel = new System.Windows.Forms.Button();
-            this.panel1.SuspendLayout();
+            this.deleteLabels = new System.Windows.Forms.Button();
+            this.MainPanel.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panel1
+            // MainPanel
             // 
-            this.panel1.Controls.Add(this.returnLabel);
-            this.panel1.Controls.Add(this.deleteLabels);
-            this.panel1.Location = new System.Drawing.Point(100, 27);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(200, 100);
-            this.panel1.TabIndex = 0;
-            // 
-            // deleteLabels
-            // 
-            this.deleteLabels.Location = new System.Drawing.Point(3, 39);
-            this.deleteLabels.Name = "deleteLabels";
-            this.deleteLabels.Size = new System.Drawing.Size(75, 23);
-            this.deleteLabels.TabIndex = 0;
-            this.deleteLabels.Text = "delete";
-            this.deleteLabels.UseVisualStyleBackColor = true;
-            this.deleteLabels.Click += new System.EventHandler(this.deleteLabels_Click);
+            this.MainPanel.Controls.Add(this.returnLabel);
+            this.MainPanel.Controls.Add(this.deleteLabels);
+            this.MainPanel.Location = new System.Drawing.Point(100, 27);
+            this.MainPanel.Name = "MainPanel";
+            this.MainPanel.Size = new System.Drawing.Size(200, 100);
+            this.MainPanel.TabIndex = 0;
             // 
             // returnLabel
             // 
@@ -63,22 +53,32 @@
             this.returnLabel.UseVisualStyleBackColor = true;
             this.returnLabel.Click += new System.EventHandler(this.returnLabel_Click);
             // 
+            // deleteLabels
+            // 
+            this.deleteLabels.Location = new System.Drawing.Point(3, 39);
+            this.deleteLabels.Name = "deleteLabels";
+            this.deleteLabels.Size = new System.Drawing.Size(75, 23);
+            this.deleteLabels.TabIndex = 0;
+            this.deleteLabels.Text = "delete";
+            this.deleteLabels.UseVisualStyleBackColor = true;
+            this.deleteLabels.Click += new System.EventHandler(this.deleteLabels_Click);
+            // 
             // DeletingObject
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(400, 161);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.MainPanel);
             this.Name = "DeletingObject";
             this.Text = "DeletingObject";
-            this.panel1.ResumeLayout(false);
+            this.MainPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private Panel panel1;
+        private Panel MainPanel;
         private Button returnLabel;
         private Button deleteLabels;
     }
