@@ -42,4 +42,17 @@ Good luck!
 
 ![diagramWithoutMethods](https://user-images.githubusercontent.com/76080041/201706719-62fa6f36-ec7c-4a95-b11f-487cfbfe66fb.png)
 
+the Registration page:
+![registrationSoft](https://user-images.githubusercontent.com/76080041/201711819-7ec7bb75-c6d0-4bad-a13b-2b5070e1dc3b.png)
+
+then the db:
+
+![db](https://user-images.githubusercontent.com/76080041/201711446-b10c6436-eff7-427a-adec-33d671fa588a.png)
+Login:
+![login](https://user-images.githubusercontent.com/76080041/201711942-f7becd09-8575-49bc-b17c-c64e72d130a6.png)
+
+
+![mainform](https://user-images.githubusercontent.com/76080041/201711478-88e58082-ffb5-47bc-ad43-48f71380766c.png)
+![addCard](https://user-images.githubusercontent.com/76080041/201711504-f1401ac3-0670-4b8f-9730-79b89fb17c2b.png)
+![afterAdded](https://user-images.githubusercontent.com/76080041/201711534-03635d8d-6631-4e89-9c68-0a30710e9d62.png)
 
