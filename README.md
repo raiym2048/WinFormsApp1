@@ -40,5 +40,6 @@ Good luck!
 ![diagramWithMethods](https://user-images.githubusercontent.com/76080041/201706573-d81d4580-6829-4f4e-a3de-eb9953af20d9.png)
 
 
+![diagramWithoutMethods](https://user-images.githubusercontent.com/76080041/201706719-62fa6f36-ec7c-4a95-b11f-487cfbfe66fb.png)
 
 
