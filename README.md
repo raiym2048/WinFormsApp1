@@ -37,6 +37,7 @@ Visual Studio 2022. Not recomended work in 2019 version.The Application writed "
 
 Good luck!
 
+![diagramWithMethods](https://user-images.githubusercontent.com/76080041/201706573-d81d4580-6829-4f4e-a3de-eb9953af20d9.png)
 
 
 
